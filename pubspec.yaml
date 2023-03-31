@@ -1,0 +1,63 @@
+name: zenlite_sdk_example
+version: 1.0.0+230331
+description: Demonstrates how to use the zenlite_sdk plugin.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+environment:
+  sdk: ">=2.14.0 <3.0.0"
+  flutter: ">=3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  fl_chart: ^0.60.0
+  charts_flutter_new:
+  flutter_easyloading: ^3.0.5
+  get: ^4.6.5
+  flutter_switch: ^0.3.2
+  app_settings: ^4.1.8
+  shared_preferences: ^2.0.5
+  cached_network_image: ^3.2.1
+  path_provider: ^2.0.2
+  json_annotation: ^4.0.1
+  fluttertoast: ^8.0.8
+  keyboard_actions: ^4.0.1
+  group_button: ^5.0.1
+  flutter_orientation: ^1.0.0
+  wakelock: ^0.6.2
+  url_launcher: ^6.0.3
+  file_picker:
+  provider:
+
+  flutter_utils:
+    version: ^2.0.0
+    hosted:
+      name: flutter_utils
+      url: https://dart-pub.brainco.cn
+
+  zenlite_sdk:
+    version: ^1.4.3+1
+    hosted:
+      name: zenlite_sdk
+      url: https://dart-pub.brainco.cn
+
+dependency_overrides:
+  dio: ^5.0.0
+  intl: ^0.18.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
