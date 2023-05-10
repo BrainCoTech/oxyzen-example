@@ -12,7 +12,7 @@
 
 ```yaml
 zenlite_sdk:
-  version: 1.4.3+1
+  version: 1.4.6
   hosted:
     name: zenlite_sdk
     url: https://dart-pub.brainco.cn
@@ -71,7 +71,7 @@ if the device cannot be scanned, or pair failed, please check [Instructions](htt
 ```dart
 try {
     await EasyLoading.show(status: 'pairing...');
-    await HeadbandManager.bindCrimson(result);
+    await HeadbandManager.bindScanResult(result);
     await EasyLoading.showSuccess('pair success');
 } catch (e, _) {
     loggerExample.i('$e');
@@ -87,16 +87,13 @@ HeadbandProxy.instance.id
 HeadbandProxy.instance.name
 HeadbandProxy.instance.state
 HeadbandProxy.instance.meditation
-HeadbandProxy.instance.drowsiness
-HeadbandProxy.instance.stress 
+HeadbandProxy.instance.awareness
 
 HeadbandProxy.instance.onStateChanged
 HeadbandProxy.instance.onEEGData
 HeadbandProxy.instance.onBrainWave
 HeadbandProxy.instance.onMeditation
-HeadbandProxy.instance.onDrowsiness
-HeadbandProxy.instance.onStress
-HeadbandProxy.instance.onPPGModel
+HeadbandProxy.instance.onAwareness
 
 enum HeadbandState {
   /// 
@@ -117,13 +114,13 @@ enum HeadbandState {
   /// AFE contact well and device wear normal
   contacted,
 
-  /// attention & meditation analyzed
+  /// meditation analyzed
   analyzed
 }
 
-state.isConnected
-state.isContacted
-state.isAnalyzed
+HeadbandProxy.instance.state.isConnected
+HeadbandProxy.instance.state.isContacted
+HeadbandProxy.instance.state.isAnalyzed
 
 class EEGModel {
   final int seqNum;

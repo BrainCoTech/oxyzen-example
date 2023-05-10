@@ -3,7 +3,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:zenlite_sdk_example/src/examples/charts/attention_chart.dart';
+import 'package:zenlite_sdk_example/src/examples/charts/line_chart.dart';
 import 'package:zenlite_sdk_example/src/examples/charts/eeg_chart.dart';
 import 'package:zenlite_sdk_example/src/examples/charts/imu_chart.dart';
 import 'package:zenlite_sdk_example/src/examples/charts/ppg_chart.dart';
@@ -63,8 +63,6 @@ class OxyzenDataWidget extends StatefulWidget {
 }
 
 class _OxyzenDataWidgetState extends State<OxyzenDataWidget> {
-  final device = HeadbandManager.headband as OxyZenHeadband;
-
   @override
   Widget build(BuildContext context) {
     final controller = Get.find<OxyzenDeviceController>();
@@ -75,35 +73,6 @@ class _OxyzenDataWidgetState extends State<OxyzenDataWidget> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Row(children: <Widget>[
-              StreamBuilder<HeadbandConnectivity>(
-                initialData: device.connectivity,
-                stream: device.onConnectivityChanged,
-                builder: (context, snapshot) => StatusText(
-                  title: 'Connectivity',
-                  value: snapshot.data!.desc,
-                  highlighted: !snapshot.data!.isConnected,
-                  // high
-                ),
-              ),
-              StreamBuilder<ContactState>(
-                initialData: device.contactState,
-                stream: device.onContactStateChanged,
-                builder: (context, snapshot) => StatusText(
-                  title: 'Contact',
-                  value: snapshot.data!.desc,
-                  highlighted: !snapshot.data!.isContacted,
-                ),
-              ),
-              if (!device.disableOrientationCheck)
-                StreamBuilder<HeadbandOrientation>(
-                  initialData: HeadbandProxy.instance.orientation,
-                  stream: HeadbandProxy.instance.onOrientationChanged,
-                  builder: (context, snapshot) => StatusText(
-                    title: 'Orientation',
-                    value: snapshot.data!.desc,
-                    highlighted: snapshot.data != HeadbandOrientation.normal,
-                  ),
-                ),
               StreamBuilder<PpgContactState>(
                 initialData: PpgContactState.undetected,
                 stream: HeadbandProxy.instance.onPPGData
@@ -148,28 +117,10 @@ class _OxyzenDataWidgetState extends State<OxyzenDataWidget> {
                 ),
                 StreamBuilder<String>(
                   initialData: '-',
-                  stream: HeadbandProxy.instance.onDrowsiness
-                      .map((value) => value.toStringAsFixed(1)),
-                  builder: (context, snapshot) => StatusText(
-                    title: 'Drowsiness',
-                    value: snapshot.data!,
-                  ),
-                ),
-                StreamBuilder<String>(
-                  initialData: '-',
-                  stream: HeadbandProxy.instance.onSense
+                  stream: HeadbandProxy.instance.onAwareness
                       .map((value) => value.toStringAsFixed(1)),
                   builder: (context, snapshot) => StatusText(
                     title: '觉察指数',
-                    value: snapshot.data!,
-                  ),
-                ),
-                StreamBuilder<String>(
-                  initialData: '-',
-                  stream: HeadbandProxy.instance.onStress
-                      .map((value) => value.toStringAsFixed(1)),
-                  builder: (context, snapshot) => StatusText(
-                    title: 'Stress',
                     value: snapshot.data!,
                   ),
                 ),
@@ -182,7 +133,6 @@ class _OxyzenDataWidgetState extends State<OxyzenDataWidget> {
                 children: [
                   SegmentWidget(
                       segments:
-                          // 'Focus'
                           HeadbandManager.isBondZenLite
                               ? ['EEG', 'ACC', 'GYRO', 'PPG', '正念'].asMap()
                               : ['EEG', 'ACC', 'GYRO', '正念'].asMap(),
@@ -196,6 +146,8 @@ class _OxyzenDataWidgetState extends State<OxyzenDataWidget> {
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               ElevatedButton(
                 onPressed: () async {
+                  final device = HeadbandManager.headband;
+                  if (device is! OxyZenHeadband) return;
                   await device.startEEG();
                 },
                 child: const Text('Start EEG'),
@@ -203,6 +155,8 @@ class _OxyzenDataWidgetState extends State<OxyzenDataWidget> {
               const SizedBox(width: 5),
               ElevatedButton(
                 onPressed: () async {
+                  final device = HeadbandManager.headband;
+                  if (device is! OxyZenHeadband) return;
                   await device.stopEEG();
                 },
                 child: const Text('Stop EEG'),
@@ -212,6 +166,8 @@ class _OxyzenDataWidgetState extends State<OxyzenDataWidget> {
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               ElevatedButton(
                 onPressed: () async {
+                  final device = HeadbandManager.headband;
+                  if (device is! OxyZenHeadband) return;
                   await device.startIMU();
                 },
                 child: const Text('Start IMU'),
@@ -219,6 +175,8 @@ class _OxyzenDataWidgetState extends State<OxyzenDataWidget> {
               const SizedBox(width: 5),
               ElevatedButton(
                 onPressed: () async {
+                  final device = HeadbandManager.headband;
+                  if (device is! OxyZenHeadband) return;
                   await device.stopIMU();
                 },
                 child: const Text('Stop IMU'),
@@ -228,6 +186,8 @@ class _OxyzenDataWidgetState extends State<OxyzenDataWidget> {
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               ElevatedButton(
                 onPressed: () async {
+                  final device = HeadbandManager.headband;
+                  if (device is! OxyZenHeadband) return;
                   await device.startPPG();
                 },
                 child: const Text('Start PPG'),
@@ -235,6 +195,8 @@ class _OxyzenDataWidgetState extends State<OxyzenDataWidget> {
               const SizedBox(width: 5),
               ElevatedButton(
                 onPressed: () async {
+                  final device = HeadbandManager.headband;
+                  if (device is! OxyZenHeadband) return;
                   device.stopPPG();
                 },
                 child: const Text('Stop PPG'),

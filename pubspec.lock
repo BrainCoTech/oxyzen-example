@@ -1033,10 +1033,10 @@ packages:
     dependency: "direct main"
     description:
       name: zenlite_sdk
-      sha256: "326e01f1fac5744139162f6a54efec8741ce809d107382fde6b6b0a22972010e"
+      sha256: f0196f7a54461ace8219f1dded7d7f5c8cc3a6eeb342f8f1f2b4c3ee9f7f339a
       url: "https://dart-pub.brainco.cn"
     source: hosted
-    version: "1.4.3+1"
+    version: "1.4.6"
 sdks:
   dart: ">=2.19.0 <3.0.0"
   flutter: ">=3.3.0"

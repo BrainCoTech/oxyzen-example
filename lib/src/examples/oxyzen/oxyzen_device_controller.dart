@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:get/get.dart';
 import 'package:zenlite_sdk_example/main.dart';
 
-
 const int eegXRange = 1000;
 const int imuXRange = 100;
 const int _imuMaxLen = imuXRange ~/ 2;

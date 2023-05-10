@@ -174,7 +174,7 @@ class ScanResultWidget extends StatelessWidget {
       onTap: () async {
         try {
           await EasyLoading.show(status: '配对中...');
-          await HeadbandManager.bindCrimson(result);
+          await HeadbandManager.bindScanResult(result);
           await EasyLoading.showSuccess('配对成功!');
           await Get.off(() =>
               result.isZenLite ? OxyZenDeviceScreen() : CrimsonDeviceScreen());
