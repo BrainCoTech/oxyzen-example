@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_utils/flutter_utils.dart';
 import 'package:get/get.dart';
-import 'package:zenlite_sdk_example/src/examples/constants/constant.dart';
-import 'package:zenlite_sdk_example/src/examples/ui.dart';
+import 'package:oxyzen_example/src/examples/constants/constant.dart';
+import 'package:oxyzen_example/src/examples/ui.dart';
 
 class RoundedTextButton extends StatelessWidget {
   final String text;

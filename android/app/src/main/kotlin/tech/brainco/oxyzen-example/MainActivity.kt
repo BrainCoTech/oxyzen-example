@@ -1,4 +1,4 @@
-package tech.brainco.zenlite_sdk_example
+package tech.brainco.oxyzen_example
 
 import io.flutter.embedding.android.FlutterActivity
 

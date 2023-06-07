@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:zenlite_sdk/zenlite_sdk.dart';
-import 'package:zenlite_sdk_example/src/examples/charts/line_chart.dart';
-import 'package:zenlite_sdk_example/src/examples/charts/eeg_chart.dart';
-import 'package:zenlite_sdk_example/src/examples/charts/imu_chart.dart';
-import 'package:zenlite_sdk_example/src/examples/widgets/segment.dart';
+import 'package:oxyzen_example/src/examples/charts/line_chart.dart';
+import 'package:oxyzen_example/src/examples/charts/eeg_chart.dart';
+import 'package:oxyzen_example/src/examples/charts/imu_chart.dart';
+import 'package:oxyzen_example/src/examples/widgets/segment.dart';
 
 import 'crimson_device_controller.dart';
 import 'widgets.dart';

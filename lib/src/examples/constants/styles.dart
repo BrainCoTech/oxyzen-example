@@ -2,7 +2,7 @@ import 'dart:io';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:zenlite_sdk_example/src/examples/ui.dart';
+import 'package:oxyzen_example/src/examples/ui.dart';
 
 import 'assets.dart';
 

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="tech.brainco.zenlite_sdk_example">
+    package="tech.brainco.oxyzen_example">
     <!-- io.flutter.app.FlutterApplication is an android.app.Application that
          calls FlutterMain.startInitialization(this); in its onCreate method.
          In most cases you can leave this as-is, but you if you want to provide
@@ -7,10 +7,9 @@
          FlutterApplication and put your custom class here. -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
-    <!--android:label="开盒游戏"-->
     <application
         android:name="${applicationName}"
-        android:label="Oxyzen Demo"
+        android:label="OxyZen Example"
         android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"

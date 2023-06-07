@@ -4,7 +4,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:zenlite_sdk/zenlite_sdk.dart';
-import 'package:zenlite_sdk_example/main.dart';
+import 'package:oxyzen_example/main.dart';
 
 class DeviceProvider with ChangeNotifier {
   final int duration = 900;

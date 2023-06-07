@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
-import 'package:zenlite_sdk_example/src/examples/crimson/crimson_device_screen.dart';
-import 'package:zenlite_sdk_example/src/examples/oxyzen/oxyzen_device_screen.dart';
+import 'package:oxyzen_example/src/examples/crimson/crimson_device_screen.dart';
+import 'package:oxyzen_example/src/examples/oxyzen/oxyzen_device_screen.dart';
 
 import '../../../main.dart';
 import 'crimson_scan_provider.dart';

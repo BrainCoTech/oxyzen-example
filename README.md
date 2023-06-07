@@ -12,7 +12,7 @@
 
 ```yaml
 zenlite_sdk:
-  version: 1.4.6
+  version: 1.6.0
   hosted:
     name: zenlite_sdk
     url: https://dart-pub.brainco.cn
@@ -61,7 +61,7 @@ await HeadbandManager.bleScanner.stopScan();
 
 ```dart
 // Scanned Devices
-HeadbandManager.bleScanner.onFoundDevices.map((event) => event as List<ScanResult>)
+HeadbandManager.bleScanner.onFoundDevices.map((e) => e as List<ScanResult>)
 ```
 
 ## Pair

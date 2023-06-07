@@ -3,9 +3,9 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
-import 'package:zenlite_sdk_example/main.dart';
+import 'package:oxyzen_example/main.dart';
 import 'package:mutex/mutex.dart';
-import 'package:zenlite_sdk_example/src/examples/utils/toast.dart';
+import 'package:oxyzen_example/src/examples/utils/toast.dart';
 
 enum OtaState {
   idle,

@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:zenlite_sdk_example/main.dart';
+import 'package:oxyzen_example/main.dart';
 
 class SegmentWidget<K extends Object, V extends String> extends StatefulWidget {
   const SegmentWidget({

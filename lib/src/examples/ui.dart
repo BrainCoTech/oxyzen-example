@@ -3,8 +3,8 @@ import 'dart:ui';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_utils/flutter_utils.dart';
 import 'package:get/get.dart';
-import 'package:zenlite_sdk_example/main.dart';
-import 'package:zenlite_sdk_example/src/examples/constants/constant.dart';
+import 'package:oxyzen_example/main.dart';
+import 'package:oxyzen_example/src/examples/constants/constant.dart';
 
 /// 默认1倍
 extension SizeRatio on num {

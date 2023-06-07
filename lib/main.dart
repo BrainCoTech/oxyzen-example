@@ -7,7 +7,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_utils/flutter_utils.dart' as utils;
 import 'package:get/get.dart';
 import 'package:zenlite_sdk/zenlite_sdk.dart';
-import 'package:zenlite_sdk_example/src/examples/constants/constant.dart';
+import 'package:oxyzen_example/src/examples/constants/constant.dart';
 
 import 'src/examples/crimson/crimson_device_screen.dart';
 import 'src/examples/crimson/crimson_scan_screen.dart';

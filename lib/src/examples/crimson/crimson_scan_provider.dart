@@ -5,7 +5,7 @@ import 'dart:io';
 
 import 'package:device_info/device_info.dart';
 import 'package:flutter/material.dart';
-import 'package:zenlite_sdk_example/main.dart';
+import 'package:oxyzen_example/main.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:zenlite_sdk/zenlite_sdk.dart';
 

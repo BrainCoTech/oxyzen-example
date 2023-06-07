@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:zenlite_sdk/zenlite_sdk.dart';
-import 'package:zenlite_sdk_example/src/examples/crimson/widgets.dart';
-import 'package:zenlite_sdk_example/src/examples/oxyzen/ota/device_ota_controller.dart';
-import 'package:zenlite_sdk_example/src/examples/ui.dart';
+import 'package:oxyzen_example/src/examples/crimson/widgets.dart';
+import 'package:oxyzen_example/src/examples/oxyzen/ota/device_ota_controller.dart';
+import 'package:oxyzen_example/src/examples/ui.dart';
 
 class DeviceOtaScreen extends StatelessWidget {
   final controller = Get.put(OxyZenOtaController(showUploadRate: true));
