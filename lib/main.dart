@@ -100,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('脑电设备DEMO V1.0.0+230510'),
+        title: Text('脑电设备DEMO'),
         backgroundColor: Colors.lightBlue,
       ),
       body: WillPopScope(
