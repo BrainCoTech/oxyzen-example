@@ -430,7 +430,7 @@ class OxyZenOtaController extends GetxController with DisposableStreamMixin {
 
     await _ppgStatusSubscription?.cancel();
     _ppgStatusSubscription = device.otaStatusController.listen((status) async {
-      if (otaState.value != OtaStatus.uploading) {
+      if (otaState.value != OtaState.uploading) {
         loggerExample.i('${_inOtaPpg ? 'PPG' : 'nRF'} OTA status=$status');
       }
       switch (status) {

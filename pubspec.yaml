@@ -37,7 +37,7 @@ dependencies:
       url: https://dart-pub.brainco.cn
 
   zenlite_sdk:
-    version: 1.6.0
+    version: 1.6.1
     hosted:
       name: zenlite_sdk
       url: https://dart-pub.brainco.cn

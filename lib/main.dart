@@ -94,6 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
     // if (headband is Focus1Headband) Get.to(() => Focus1DeviceDataScreen());
     if (headband is CrimsonHeadband) Get.to(() => CrimsonDeviceScreen());
     if (headband is OxyZenHeadband) Get.to(() => OxyZenDeviceScreen());
+    // PackageInfo packageInfo = await PackageInfo.fromPlatform();
   }
 
   @override
