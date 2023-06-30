@@ -1,5 +1,5 @@
 name: oxyzen_example
-version: 1.6.0+1
+version: 1.6.3+1
 description: Demonstrates how to use the zenlite_sdk plugin.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
@@ -37,7 +37,7 @@ dependencies:
       url: https://dart-pub.brainco.cn
 
   zenlite_sdk:
-    version: 1.6.1
+    version: 1.6.3
     hosted:
       name: zenlite_sdk
       url: https://dart-pub.brainco.cn

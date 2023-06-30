@@ -12,7 +12,7 @@
 
 ```yaml
 zenlite_sdk:
-  version: 1.6.0
+  version: 1.6.3
   hosted:
     name: zenlite_sdk
     url: https://dart-pub.brainco.cn

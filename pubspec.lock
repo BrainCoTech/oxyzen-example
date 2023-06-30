@@ -548,10 +548,10 @@ packages:
     dependency: transitive
     description:
       name: oxyzen_lib
-      sha256: "4fb8b6ca59cd10271d5c4f71f0a67f23cf80fb6727116aa6b842a4431e0bd9c6"
+      sha256: "385b97bc2ddd0dbe2d255e09bb86a24cc28cc90e22f571eceff986b93315dff7"
       url: "https://dart-pub.brainco.cn"
     source: hosted
-    version: "0.10.3"
+    version: "0.10.4"
   package_info:
     dependency: transitive
     description:
@@ -1033,10 +1033,10 @@ packages:
     dependency: "direct main"
     description:
       name: zenlite_sdk
-      sha256: "0cc906662715a0b66e4de48a7fcaac691cd001e127e656d83535660572a9e863"
+      sha256: d4f84e5edb5a241e783b59b8cc15ed0806aac3e74e156cb2256d45d25f20bd57
       url: "https://dart-pub.brainco.cn"
     source: hosted
-    version: "1.6.1"
+    version: "1.6.3"
 sdks:
   dart: ">=3.0.0-0 <4.0.0"
   flutter: ">=3.3.0"
